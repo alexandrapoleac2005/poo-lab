@@ -52,5 +52,6 @@ public class Main {
         int y = (int)doub;
         System.out.println("y = " + y);
 
+
     }
 }
