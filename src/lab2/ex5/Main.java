@@ -11,6 +11,7 @@ public class Main {
 
         System.out.println();
 
+        // valori in virgula flotanta
         double y = in.nextDouble();
         System.out.println("y = " + y);
 
