@@ -73,5 +73,6 @@ public class Main {
        System.out.println("Am ghicit " + nr_castigatoare + " numere");
 
        System.out.println();
+
     }
 }

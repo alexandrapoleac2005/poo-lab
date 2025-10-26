@@ -9,6 +9,7 @@ public class Main {
         String text1 = in.nextLine();
         String text2 = in.nextLine();
 
+
         System.out.println(text1 + " " + text2);
         System.out.println(text1 + text2);
 
