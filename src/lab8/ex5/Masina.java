@@ -1,6 +1,6 @@
 package lab8.ex5;
 
-public class Masina implements Cloneable{
+public class Masina implements Cloneable {
 
     private String marca;
     private String culoare;
@@ -12,20 +12,16 @@ public class Masina implements Cloneable{
 
     public void revopseste(String culoareNoua){
         this.culoare = culoareNoua;
-        System.out.println("Masina " + this.marca + " a fost revopsita in culoarea " + culoareNoua);
     }
 
-    public String getCuloare(){
-        return this.culoare;
+    @Override
+    public Masina clone() throws CloneNotSupportedException {
+        return (Masina) super.clone();
     }
 
     @Override
     public String toString(){
-        return "Masina sa are marca: " + marca + " si culoarea: " + culoare;
+        return marca + " " + culoare;
     }
 
-    @Override
-    public Object clone()throws CloneNotSupportedException{
-        return super.clone();
-    }
 }

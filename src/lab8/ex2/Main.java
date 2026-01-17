@@ -29,7 +29,7 @@ public class Main {
         matD_F.afiseaza();
 
         Numeric scalar_F = new Fractie(2, 1);
-        Matrice matE_F = (Matrice) matA_F.inmulScalar(scalar_F);
+        Matrice matE_F = (Matrice) matA_F.inmultireScalar(scalar_F);
         System.out.println("\nRezultat Inmultire cu Scalar (A * 2/1):");
         matE_F.afiseaza();
 
@@ -62,7 +62,7 @@ public class Main {
 
 
         Numeric scalar_C = new Complex(1.0, 1.0);
-        Matrice matW_C = (Matrice) matX_C.inmulScalar(scalar_C);
+        Matrice matW_C = (Matrice) matX_C.inmultireScalar(scalar_C);
         System.out.println("\nRezultat Inmultire cu Scalar (X * 1+1i):");
         matW_C.afiseaza();
 

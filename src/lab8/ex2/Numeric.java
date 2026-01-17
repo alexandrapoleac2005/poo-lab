@@ -2,7 +2,8 @@ package lab8.ex2;
 
 public interface Numeric {
 
-    Object aduna(Object obj);
-    Object scade(Object obj);
-    Object inmulteste(Object obj);
+    public Object aduna(Object obj);
+    public Object scade(Object obj);
+    public Object inmulteste(Object obj);
+    
 }

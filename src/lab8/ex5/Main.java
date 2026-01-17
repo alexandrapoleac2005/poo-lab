@@ -1,53 +1,27 @@
 package lab8.ex5;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws CloneNotSupportedException {
 
-        System.out.println("Shallow Copy: ");
-        Masina masinaOriginala = new Masina("Dacia", "Rosu");
-        Student studentOriginalS = new Student("Popescu", "Ion", masinaOriginala);
+        Masina masina1 = new Masina("Mercedes", "alb");
 
-        System.out.println(studentOriginalS);
+        Student student1 = new Student("Poleac", "Alexandra", masina1);
 
-        try{
-            Student studentClonaS = studentOriginalS.shallowClone();
-            System.out.println(studentClonaS);
+        // Pentru Shallow Copy
+        Student studentCopiat1 = student1.shallowCopy();
+        studentCopiat1.getMasina().revopseste("rosu");
 
-            studentClonaS.getMasina().revopseste("Albastru");
-            System.out.println(studentOriginalS);
-            System.out.println(studentClonaS);
+        System.out.println(student1);
+        System.out.println(studentCopiat1);
 
-            if(studentOriginalS.getMasina().getCuloare().equals("Albastru")){
-                System.out.println("S-a schimbat si originalul");
-            }
+        masina1.revopseste("negru");
 
-        } catch(CloneNotSupportedException e){
-            System.out.println("Eroare la clonare");
-        }
+        // Pentru Deep Copy
+        Student studentCopiat2 = student1.deepCopy();
+        studentCopiat2.getMasina().revopseste("rosu");
 
-        System.out.println("\n");
-        System.out.println("Deep Copy: ");
-
-        Masina masinaNoua = new Masina("BMW", "Negru");
-        Student studentOriginalD = new Student("Ionescu", "Ana", masinaNoua);
-        System.out.println(studentOriginalD);
-
-        try{
-
-            Student studentClonaD = studentOriginalD.deepClone();
-            System.out.println(studentClonaD);
-
-            studentClonaD.getMasina().revopseste("Alb");
-            System.out.println(studentOriginalD);
-            System.out.println(studentClonaD);
-
-            if(studentOriginalD.getMasina().getCuloare().equals("Negru")){
-                System.out.println("Originalul a ramas neschimbat");
-            }
-        }
-        catch(CloneNotSupportedException e){
-            System.out.println("Eroare la clonare");
-        }
+        System.out.println(student1);
+        System.out.println(studentCopiat2);
 
     }
 }
